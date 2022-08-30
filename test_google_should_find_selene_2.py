@@ -19,4 +19,4 @@ def test_find_selene_first(configure_desktop_browser):
 def test_find_selene_second(configure_desktop_browser):
     browser.open('https://google.com')
     browser.element('[name="q"]').should(be.blank).type('e1essssssdasdsdasd12123').press_enter()
-    browser.element('[id="search"]').should(have.text('Selene - User-oriented Web UI browser tests in Python'))
+    browser.element('[id="search"]').should_not(have.text('Selene - User-oriented Web UI browser tests in Python'))
